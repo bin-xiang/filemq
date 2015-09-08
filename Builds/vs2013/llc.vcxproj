@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{96EB65C1-50F9-4A94-BAAD-E86AFECCFD60}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>llc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;ZMQ_HAVE_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;rpcrt4.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;ZMQ_HAVE_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;rpcrt4.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Flag\Flag.cpp" />
+    <ClCompile Include="..\..\Zmq\address.cpp" />
+    <ClCompile Include="..\..\Zmq\clock.cpp" />
+    <ClCompile Include="..\..\Zmq\ctx.cpp" />
+    <ClCompile Include="..\..\Zmq\curve_client.cpp" />
+    <ClCompile Include="..\..\Zmq\curve_server.cpp" />
+    <ClCompile Include="..\..\Zmq\dealer.cpp" />
+    <ClCompile Include="..\..\Zmq\devpoll.cpp" />
+    <ClCompile Include="..\..\Zmq\dist.cpp" />
+    <ClCompile Include="..\..\Zmq\epoll.cpp" />
+    <ClCompile Include="..\..\Zmq\err.cpp" />
+    <ClCompile Include="..\..\Zmq\errno.cpp" />
+    <ClCompile Include="..\..\Zmq\fq.cpp" />
+    <ClCompile Include="..\..\Zmq\io_object.cpp" />
+    <ClCompile Include="..\..\Zmq\io_thread.cpp" />
+    <ClCompile Include="..\..\Zmq\ip.cpp" />
+    <ClCompile Include="..\..\Zmq\ipc_address.cpp" />
+    <ClCompile Include="..\..\Zmq\ipc_connecter.cpp" />
+    <ClCompile Include="..\..\Zmq\ipc_listener.cpp" />
+    <ClCompile Include="..\..\Zmq\kqueue.cpp" />
+    <ClCompile Include="..\..\Zmq\lb.cpp" />
+    <ClCompile Include="..\..\Zmq\mailbox.cpp" />
+    <ClCompile Include="..\..\Zmq\mechanism.cpp" />
+    <ClCompile Include="..\..\Zmq\msg.cpp" />
+    <ClCompile Include="..\..\Zmq\mtrie.cpp" />
+    <ClCompile Include="..\..\Zmq\null_mechanism.cpp" />
+    <ClCompile Include="..\..\Zmq\object.cpp" />
+    <ClCompile Include="..\..\Zmq\options.cpp" />
+    <ClCompile Include="..\..\Zmq\own.cpp" />
+    <ClCompile Include="..\..\Zmq\pair.cpp" />
+    <ClCompile Include="..\..\Zmq\pgm_receiver.cpp" />
+    <ClCompile Include="..\..\Zmq\pgm_sender.cpp" />
+    <ClCompile Include="..\..\Zmq\pgm_socket.cpp" />
+    <ClCompile Include="..\..\Zmq\pipe.cpp" />
+    <ClCompile Include="..\..\Zmq\plain_mechanism.cpp" />
+    <ClCompile Include="..\..\Zmq\poll.cpp" />
+    <ClCompile Include="..\..\Zmq\poller_base.cpp" />
+    <ClCompile Include="..\..\Zmq\precompiled.cpp" />
+    <ClCompile Include="..\..\Zmq\proxy.cpp" />
+    <ClCompile Include="..\..\Zmq\pub.cpp" />
+    <ClCompile Include="..\..\Zmq\pull.cpp" />
+    <ClCompile Include="..\..\Zmq\push.cpp" />
+    <ClCompile Include="..\..\Zmq\random.cpp" />
+    <ClCompile Include="..\..\Zmq\raw_decoder.cpp" />
+    <ClCompile Include="..\..\Zmq\raw_encoder.cpp" />
+    <ClCompile Include="..\..\Zmq\reaper.cpp" />
+    <ClCompile Include="..\..\Zmq\rep.cpp" />
+    <ClCompile Include="..\..\Zmq\req.cpp" />
+    <ClCompile Include="..\..\Zmq\router.cpp" />
+    <ClCompile Include="..\..\Zmq\select.cpp" />
+    <ClCompile Include="..\..\Zmq\session_base.cpp" />
+    <ClCompile Include="..\..\Zmq\signaler.cpp" />
+    <ClCompile Include="..\..\Zmq\socket_base.cpp" />
+    <ClCompile Include="..\..\Zmq\stream.cpp" />
+    <ClCompile Include="..\..\Zmq\stream_engine.cpp" />
+    <ClCompile Include="..\..\Zmq\sub.cpp" />
+    <ClCompile Include="..\..\Zmq\tcp.cpp" />
+    <ClCompile Include="..\..\Zmq\tcp_address.cpp" />
+    <ClCompile Include="..\..\Zmq\tcp_connecter.cpp" />
+    <ClCompile Include="..\..\Zmq\tcp_listener.cpp" />
+    <ClCompile Include="..\..\Zmq\thread.cpp" />
+    <ClCompile Include="..\..\Zmq\trie.cpp" />
+    <ClCompile Include="..\..\Zmq\v1_decoder.cpp" />
+    <ClCompile Include="..\..\Zmq\v1_encoder.cpp" />
+    <ClCompile Include="..\..\Zmq\v2_decoder.cpp" />
+    <ClCompile Include="..\..\Zmq\v2_encoder.cpp" />
+    <ClCompile Include="..\..\Zmq\xpub.cpp" />
+    <ClCompile Include="..\..\Zmq\xsub.cpp" />
+    <ClCompile Include="..\..\Zmq\zmq.cpp" />
+    <ClCompile Include="..\..\Zmq\zmq_utils.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Flag\Flag.h" />
+    <ClInclude Include="..\..\Zmq\address.hpp" />
+    <ClInclude Include="..\..\Zmq\array.hpp" />
+    <ClInclude Include="..\..\Zmq\atomic_counter.hpp" />
+    <ClInclude Include="..\..\Zmq\atomic_ptr.hpp" />
+    <ClInclude Include="..\..\Zmq\blob.hpp" />
+    <ClInclude Include="..\..\Zmq\clock.hpp" />
+    <ClInclude Include="..\..\Zmq\command.hpp" />
+    <ClInclude Include="..\..\Zmq\config.hpp" />
+    <ClInclude Include="..\..\Zmq\ctx.hpp" />
+    <ClInclude Include="..\..\Zmq\curve_client.hpp" />
+    <ClInclude Include="..\..\Zmq\curve_server.hpp" />
+    <ClInclude Include="..\..\Zmq\dbuffer.hpp" />
+    <ClInclude Include="..\..\Zmq\dealer.hpp" />
+    <ClInclude Include="..\..\Zmq\decoder.hpp" />
+    <ClInclude Include="..\..\Zmq\devpoll.hpp" />
+    <ClInclude Include="..\..\Zmq\dist.hpp" />
+    <ClInclude Include="..\..\Zmq\encoder.hpp" />
+    <ClInclude Include="..\..\Zmq\epoll.hpp" />
+    <ClInclude Include="..\..\Zmq\err.hpp" />
+    <ClInclude Include="..\..\Zmq\errno.hpp" />
+    <ClInclude Include="..\..\Zmq\fd.hpp" />
+    <ClInclude Include="..\..\Zmq\fq.hpp" />
+    <ClInclude Include="..\..\Zmq\io_object.hpp" />
+    <ClInclude Include="..\..\Zmq\io_thread.hpp" />
+    <ClInclude Include="..\..\Zmq\ip.hpp" />
+    <ClInclude Include="..\..\Zmq\ipc_address.hpp" />
+    <ClInclude Include="..\..\Zmq\ipc_connecter.hpp" />
+    <ClInclude Include="..\..\Zmq\ipc_listener.hpp" />
+    <ClInclude Include="..\..\Zmq\i_decoder.hpp" />
+    <ClInclude Include="..\..\Zmq\i_encoder.hpp" />
+    <ClInclude Include="..\..\Zmq\i_engine.hpp" />
+    <ClInclude Include="..\..\Zmq\i_poll_events.hpp" />
+    <ClInclude Include="..\..\Zmq\kqueue.hpp" />
+    <ClInclude Include="..\..\Zmq\lb.hpp" />
+    <ClInclude Include="..\..\Zmq\likely.hpp" />
+    <ClInclude Include="..\..\Zmq\mailbox.hpp" />
+    <ClInclude Include="..\..\Zmq\mechanism.hpp" />
+    <ClInclude Include="..\..\Zmq\msg.hpp" />
+    <ClInclude Include="..\..\Zmq\mtrie.hpp" />
+    <ClInclude Include="..\..\Zmq\mutex.hpp" />
+    <ClInclude Include="..\..\Zmq\null_mechanism.hpp" />
+    <ClInclude Include="..\..\Zmq\object.hpp" />
+    <ClInclude Include="..\..\Zmq\options.hpp" />
+    <ClInclude Include="..\..\Zmq\own.hpp" />
+    <ClInclude Include="..\..\Zmq\pair.hpp" />
+    <ClInclude Include="..\..\Zmq\pgm_receiver.hpp" />
+    <ClInclude Include="..\..\Zmq\pgm_sender.hpp" />
+    <ClInclude Include="..\..\Zmq\pgm_socket.hpp" />
+    <ClInclude Include="..\..\Zmq\pipe.hpp" />
+    <ClInclude Include="..\..\Zmq\plain_mechanism.hpp" />
+    <ClInclude Include="..\..\Zmq\platform.hpp" />
+    <ClInclude Include="..\..\Zmq\poll.hpp" />
+    <ClInclude Include="..\..\Zmq\poller.hpp" />
+    <ClInclude Include="..\..\Zmq\poller_base.hpp" />
+    <ClInclude Include="..\..\Zmq\precompiled.hpp" />
+    <ClInclude Include="..\..\Zmq\proxy.hpp" />
+    <ClInclude Include="..\..\Zmq\pub.hpp" />
+    <ClInclude Include="..\..\Zmq\pull.hpp" />
+    <ClInclude Include="..\..\Zmq\push.hpp" />
+    <ClInclude Include="..\..\Zmq\random.hpp" />
+    <ClInclude Include="..\..\Zmq\raw_decoder.hpp" />
+    <ClInclude Include="..\..\Zmq\raw_encoder.hpp" />
+    <ClInclude Include="..\..\Zmq\reaper.hpp" />
+    <ClInclude Include="..\..\Zmq\rep.hpp" />
+    <ClInclude Include="..\..\Zmq\req.hpp" />
+    <ClInclude Include="..\..\Zmq\router.hpp" />
+    <ClInclude Include="..\..\Zmq\select.hpp" />
+    <ClInclude Include="..\..\Zmq\session_base.hpp" />
+    <ClInclude Include="..\..\Zmq\signaler.hpp" />
+    <ClInclude Include="..\..\Zmq\socket_base.hpp" />
+    <ClInclude Include="..\..\Zmq\stdint.hpp" />
+    <ClInclude Include="..\..\Zmq\stream.hpp" />
+    <ClInclude Include="..\..\Zmq\stream_engine.hpp" />
+    <ClInclude Include="..\..\Zmq\sub.hpp" />
+    <ClInclude Include="..\..\Zmq\tcp.hpp" />
+    <ClInclude Include="..\..\Zmq\tcp_address.hpp" />
+    <ClInclude Include="..\..\Zmq\tcp_connecter.hpp" />
+    <ClInclude Include="..\..\Zmq\tcp_listener.hpp" />
+    <ClInclude Include="..\..\Zmq\thread.hpp" />
+    <ClInclude Include="..\..\Zmq\trie.hpp" />
+    <ClInclude Include="..\..\Zmq\v1_decoder.hpp" />
+    <ClInclude Include="..\..\Zmq\v1_encoder.hpp" />
+    <ClInclude Include="..\..\Zmq\v2_decoder.hpp" />
+    <ClInclude Include="..\..\Zmq\v2_encoder.hpp" />
+    <ClInclude Include="..\..\Zmq\v2_protocol.hpp" />
+    <ClInclude Include="..\..\Zmq\windows.hpp" />
+    <ClInclude Include="..\..\Zmq\wire.hpp" />
+    <ClInclude Include="..\..\Zmq\xpub.hpp" />
+    <ClInclude Include="..\..\Zmq\xsub.hpp" />
+    <ClInclude Include="..\..\Zmq\ypipe.hpp" />
+    <ClInclude Include="..\..\Zmq\ypipe_base.hpp" />
+    <ClInclude Include="..\..\Zmq\ypipe_conflate.hpp" />
+    <ClInclude Include="..\..\Zmq\yqueue.hpp" />
+    <ClInclude Include="..\..\Zmq\zmq.h" />
+    <ClInclude Include="..\..\Zmq\zmq_utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Zmq\libzmq.pc.cmake.in" />
+    <None Include="..\..\Zmq\libzmq.pc.in" />
+    <None Include="..\..\Zmq\libzmq.vers" />
+    <None Include="..\..\Zmq\Makefile.am" />
+    <None Include="..\..\Zmq\version.rc.in" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
