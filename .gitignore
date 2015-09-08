@@ -1,0 +1,17 @@
+*.sdf
+*.opensdf
+*.suo  
+*.v12.suo
+*.o
+*.d
+
+Debug
+Release
+
+*.log
+*.ipch
+
+Build
+
+*.user
+*.bak
